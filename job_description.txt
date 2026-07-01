@@ -1,0 +1,2 @@
+Job Title: Senior Frontend Engineer
+Requirements: Looking for an expert in React, Tailwind CSS, and web application logic. Must have strong experience with state management and building clean user interfaces. Experience with MERN stack is a plus.
