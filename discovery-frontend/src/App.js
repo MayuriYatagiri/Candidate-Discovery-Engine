@@ -43,18 +43,19 @@ export default function CandidateDashboard() {
         <h1 className="text-xl font-bold tracking-tight">👥 AI Candidate Discovery Portal</h1>
         <div className="space-x-3">
           <button 
-  onClick={handleEvaluate} 
-  className="bg-blue-600 text-white px-4 py-2 rounded mr-4" // ◄ Added mr-4 here
->
-  Run Discovery Engine
-</button>
-
-<button 
-  onClick={handleDownload} 
-  className="bg-green-600 text-white px-4 py-2 rounded"
->
-  📥 Download Excel Deliverable
-</button>
+            onClick={handleEvaluate} 
+            disabled={loading}
+            className="bg-white text-indigo-600 px-4 py-2 rounded-lg font-semibold hover:bg-indigo-50 transition active:scale-95 disabled:opacity-50"
+          >
+            {loading ? 'Processing ML Matrix...' : 'Run Discovery Engine'}
+          </button>
+          {candidates.length > 0 && (
+            <button 
+              onClick={handleDownload}
+              className="bg-green-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-600 transition active:scale-95"
+            >
+              📥 Download Excel Deliverable
+            </button>
           )}
         </div>
       </nav>
