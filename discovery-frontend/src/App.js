@@ -11,7 +11,7 @@ export default function CandidateDashboard() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://127.0.0.1:8000/evaluate-static', {
+      const response = await fetch('https://candidate-discovery-engine.onrender.com/evaluate-static', {
         method: 'POST',
         headers: { 'Accept': 'application/json' }
       });
@@ -33,7 +33,7 @@ export default function CandidateDashboard() {
 
   // Direct Deliverable Download Trigger
   const handleDownload = () => {
-    window.open('http://127.0.0.1:8000/download-deliverable', '_blank');
+    window.open('https://candidate-discovery-engine.onrender.com/download-deliverable', '_blank');
   };
 
   return (
